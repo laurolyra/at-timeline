@@ -1,8 +1,5 @@
-html {
-  color-scheme: light dark;
-  font-family: system-ui;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
