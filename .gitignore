@@ -3,3 +3,4 @@ dist/
 node_modules/
 timeline.zip
 timeline/
+.DS_Store
