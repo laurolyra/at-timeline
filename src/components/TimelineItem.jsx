@@ -1,14 +1,16 @@
-export default function TimelineItem({ start, end, name }) {
+export default function TimelineItem({ allUniqueDates, start, end, name, columnWidth }) {
+    const intervalDates = allUniqueDates.filter(date => date>= start && date<= end).length;
+
     return (
-        <div className="timeline-item">
+        <div className="timeline-item" style={{width: `${(columnWidth*intervalDates) + (15*(intervalDates -1))}px`}}>
         { start && end ? (
-            <div className="date-range">
-                <h1>{start}</h1>
-                <h1>{end}</h1>
+            <div className="date-label-2" >
+                <p>{start}</p>
+                <p>{end}</p>
             </div>
         ) : null}
             <div className="event-name">
-                <p>{name}</p>
+                <p>ok{name}</p>
             </div>
         </div>
     )
